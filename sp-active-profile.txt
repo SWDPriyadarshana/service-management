@@ -1,0 +1,4 @@
+Run->run configurations, select your maven launch configuration, then select the Argument tab, and type your argument 
+in the VM arguments text area.
+
+-Dspring.profiles.active=dev

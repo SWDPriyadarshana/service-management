@@ -1,0 +1,69 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd"
+         updateCheck="true"
+         monitoring="autodetect"
+         dynamicConfig="true">
+
+    <diskStore path="java.io.tmpdir" />
+
+    <cache name="apparatusCache"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="1000"
+           eternal="false"
+           diskSpoolBufferSizeMB="20"
+           timeToIdleSeconds="300" timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+    
+     <cache name="apparatusListCache"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="1000"
+           eternal="false"
+           diskSpoolBufferSizeMB="20"
+           timeToIdleSeconds="300" timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+    
+    
+    
+    
+     <cache name="teacherCache"
+        eternal="false"
+        maxEntriesLocalHeap="10000"
+        maxEntriesLocalDisk="1000" 
+        diskSpoolBufferSizeMB="20"
+        timeToIdleSeconds="200" timeToLiveSeconds="900"
+        memoryStoreEvictionPolicy="LFU"
+        transactionalMode="off">
+          <persistence strategy="localTempSwap" />
+    </cache>
+    
+    
+       <cache name="oneteacherCache"
+        eternal="false"
+        maxEntriesLocalHeap="10000"
+        maxEntriesLocalDisk="1000" 
+        diskSpoolBufferSizeMB="20"
+        timeToIdleSeconds="200" timeToLiveSeconds="900"
+        memoryStoreEvictionPolicy="LFU"
+        transactionalMode="off">
+          <persistence strategy="localTempSwap" />
+    </cache>
+
+    <defaultCache
+            name="defaut"
+            maxElementsInMemory="5"
+            eternal="false"
+            timeToIdleSeconds="20"
+            timeToLiveSeconds="20"
+            overflowToDisk="false"
+            diskPersistent="false"
+            memoryStoreEvictionPolicy="LRU"
+            />           
+
+
+</ehcache>
